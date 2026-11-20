@@ -7,6 +7,7 @@ An Obsidian knowledge base on the theoretical methods that come up again and aga
 ## Contents
 
 - **Van Vleck perturbation theory**
+  - [Van Vleck perturbation theory - near and far](Notes/Van%20Vleck%20perturbation%20theory/Van%20Vleck%20perturbation%20theory%20-%20near%20and%20far.md)
   - [Van Vleck perturbation theory and the effective Hamiltonian](Notes/Van%20Vleck%20perturbation%20theory/Van%20Vleck%20perturbation%20theory%20and%20the%20effective%20Hamiltonian.md)
   - [Van Vleck perturbation theory - dressed states, errors and symmetries](Notes/Van%20Vleck%20perturbation%20theory/Van%20Vleck%20perturbation%20theory%20-%20dressed%20states%2C%20errors%20and%20symmetries.md)
 
