@@ -47,7 +47,10 @@ $$
 \tilde H = e^{A} H e^{-A}
 $$
 
-has no off-diagonal block, at least up to the order we need. (Many texts write $A=iS$ with a Hermitian $S$.) Once that is true, $P\tilde H P$ is a Hamiltonian on $P$ alone. Its eigenvalues are eigenvalues of $H$ to that order, because a unitary transformation does not change the spectrum.
+has no off-diagonal block, **at least up to the order we need**. (Many texts write $A=iS$ with a Hermitian $S$.) Once that is true, $P\tilde H P$ is a Hamiltonian on $P$ alone. Its eigenvalues are eigenvalues of $H$ to that order, because a unitary transformation does not change the spectrum.
+
+>[!note]
+>这里我们可以插入我们的ppt的图片
 
 The Baker–Campbell–Hausdorff formula expands $\tilde H$ in nested commutators,
 
@@ -97,6 +100,9 @@ $$
 \tilde H^{(2)} &= [A_2, H_0] + [A_1, V] + \tfrac12[A_1,[A_1,H_0]] ,
 \end{aligned}
 $$
+
+>[!note]
+>这里插一个callout把 A 的展开代入到 $\tilde H$ 的BCH 展开那里，这样直观一些
 
 and so on. At each order we choose the new generator to cancel whatever is off-diagonal.
 
