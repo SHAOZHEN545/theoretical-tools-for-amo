@@ -5,36 +5,6 @@ tags:
   - effective-Hamiltonian
 ---
 
-Most of the time we care about only a handful of states. In a precision measurement on a molecule, for instance, these are the few spin sublevels of one electronic, vibrational and rotational level. Everything else, from excited electronic states to other rotational levels, lies far away.
-
-The far-away states still matter. The perturbations we care about connect our handful of states to them, and these brief virtual excursions shift and split the levels we measure. We would like a Hamiltonian that acts only on the handful of states and still knows about the excursions.
-
-Van Vleck perturbation theory builds one. It rotates the Hamiltonian with a unitary transformation until the states we care about decouple from the rest, and then simply discards the rest. The procedure is often called "folding down" the Hilbert space. In condensed-matter physics the same construction is known as the Schrieffer–Wolff transformation.
-
-We set it up in general from the start. The states we keep may be degenerate or not, and we work with operators throughout. Matrix elements, and the familiar non-degenerate and degenerate formulas, come out at the end as special cases.
-
-This note follows the main line, from the setup to the effective Hamiltonian at third order. Several questions hide beneath the formulas: what the states of the model space stand for, what becomes of other operators, how exact the energy denominators are, where the errors come from, why symmetries survive, and when the construction fails. [[Van Vleck perturbation theory - dressed states, errors and symmetries]] takes them up.
-
-## Near and far
-
-Every perturbative statement rests on one comparison. Take two eigenstates of $H_0$ with energies $E_1$ and $E_2$, and let the perturbation couple them with a matrix element $v$. The exact energies are
-
-$$
-E_\pm=\frac{E_1+E_2}{2}\pm\sqrt{\Big(\frac{E_1-E_2}{2}\Big)^2+|v|^2} .
-$$
-
-When $|v|\ll|E_1-E_2|$, we may expand the square root. Each level is pushed away from the other by $|v|^2/|E_1-E_2|$, and each eigenstate takes in an admixture $v/(E_1-E_2)$ of the other. When $|v|$ is comparable with $|E_1-E_2|$, the two states mix completely, and no expansion in $v$ can describe that: the series diverges as soon as $|v|>|E_1-E_2|/2$. We have to diagonalize the $2\times2$ problem as it stands.
-
-So near and far are not properties of the spectrum alone. They compare an energy difference with a coupling. Two states are far apart, for a given perturbation, when their coupling is small compared with their energy difference. They are degenerate when their energies are equal, and nearly degenerate when the difference is not large compared with the coupling.
-
-The same pair of levels can be both. The $N=0$ and $N=1$ levels of a polar molecule lie about a GHz apart. For the nuclear-spin couplings, at most a few hundred MHz, they are far apart. A static field of 1 kV/cm couples them by about twice their spacing, and for that perturbation they are nearly degenerate.
-
-The strategy follows. We put into a model space the states we care about, together with every state that is near them, and we treat all couplings among these exactly. Every other state must be far from all states of the model space, and those we fold away perturbatively. Inside the model space nothing needs to be far.
-
-The familiar theories are special cases. Non-degenerate perturbation theory is the case of a model space with a single state; its requirement that no other level come close is our requirement on everything outside. Degenerate perturbation theory is the case of a model space with one degenerate level. Van Vleck's construction covers both, and everything in between, with one set of formulas.
-
-## Two subspaces
-
 We start from
 
 $$
@@ -42,6 +12,10 @@ H = H_0 + \lambda V,
 $$
 
 where the eigenstates and energies of $H_0$ are known and $V$ is the perturbation. The parameter $\lambda$ only keeps track of orders; we set $\lambda = 1$ once the orders are sorted.
+
+We want an effective Hamiltonian that acts only on a few of the states and still knows about all the others. Why we want it, and how to choose the few, is the subject of [[Van Vleck perturbation theory - near and far|near and far]].
+
+## Two subspaces
 
 The *model space* $P$ is spanned by eigenstates $|a\rangle,|b\rangle,|c\rangle,\dots$ of $H_0$, with $H_0|a\rangle=E_a|a\rangle$. Some of the $E_a$ may coincide, and nothing below requires them to be equal or different. The *external space* $Q$ holds everything else, with eigenstates $|\alpha\rangle,|\beta\rangle,\dots$ and energies $E_\alpha$. Using the same letters for the projectors,
 
@@ -73,7 +47,10 @@ $$
 \tilde H = e^{A} H e^{-A}
 $$
 
-has no off-diagonal block, at least up to the order we need. (Many texts write $A=iS$ with a Hermitian $S$.) Once that is true, $P\tilde H P$ is a Hamiltonian on $P$ alone. Its eigenvalues are eigenvalues of $H$ to that order, because a unitary transformation does not change the spectrum.
+has no off-diagonal block, **at least up to the order we need**. (Many texts write $A=iS$ with a Hermitian $S$.) Once that is true, $P\tilde H P$ is a Hamiltonian on $P$ alone. Its eigenvalues are eigenvalues of $H$ to that order, because a unitary transformation does not change the spectrum.
+
+>[!note]
+>这里我们可以插入我们的ppt的图片
 
 The Baker–Campbell–Hausdorff formula expands $\tilde H$ in nested commutators,
 
@@ -123,6 +100,9 @@ $$
 \tilde H^{(2)} &= [A_2, H_0] + [A_1, V] + \tfrac12[A_1,[A_1,H_0]] ,
 \end{aligned}
 $$
+
+>[!note]
+>这里插一个callout把 A 的展开代入到 $\tilde H$ 的BCH 展开那里，这样直观一些
 
 and so on. At each order we choose the new generator to cancel whatever is off-diagonal.
 
@@ -241,7 +221,7 @@ $$
 A_1=PVR-RVP,\qquad R\equiv R(E_0) .
 $$
 
-Eq. (4) also shows where the theory breaks down. $R(E_a)$ blows up when a state of $Q$ approaches $E_a$, which is the requirement of the previous section seen from the inside ([[Van Vleck perturbation theory - dressed states, errors and symmetries#When the folding fails|when the folding fails]]).
+Eq. (4) also shows where the theory breaks down. $R(E_a)$ blows up when a state of $Q$ approaches $E_a$, which is the requirement of [[#Two subspaces]] seen from the inside ([[Van Vleck perturbation theory - dressed states, errors and symmetries#When the folding fails|when the folding fails]]).
 
 ## Second order
 
