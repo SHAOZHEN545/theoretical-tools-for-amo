@@ -9,9 +9,11 @@ An Obsidian knowledge base on the theoretical methods that come up again and aga
 - **Van Vleck perturbation theory**
   - [Van Vleck perturbation theory - near and far](Notes/Van%20Vleck%20perturbation%20theory/Van%20Vleck%20perturbation%20theory%20-%20near%20and%20far.md)
   - [Van Vleck perturbation theory and the effective Hamiltonian](Notes/Van%20Vleck%20perturbation%20theory/Van%20Vleck%20perturbation%20theory%20and%20the%20effective%20Hamiltonian.md)
-  - [Van Vleck perturbation theory - dressed states, errors and symmetries](Notes/Van%20Vleck%20perturbation%20theory/Van%20Vleck%20perturbation%20theory%20-%20dressed%20states%2C%20errors%20and%20symmetries.md)
+  - [Van Vleck perturbation theory - dressed states and rotated operators](Notes/Van%20Vleck%20perturbation%20theory/Van%20Vleck%20perturbation%20theory%20-%20dressed%20states%20and%20rotated%20operators.md)
+  - [Van Vleck perturbation theory - errors](Notes/Van%20Vleck%20perturbation%20theory/Van%20Vleck%20perturbation%20theory%20-%20errors.md)
+  - [Van Vleck perturbation theory - symmetries](Notes/Van%20Vleck%20perturbation%20theory/Van%20Vleck%20perturbation%20theory%20-%20symmetries.md)
 
-Numerical checks of the formulas are in [`checks/`](checks/). Run them from the repository root with Python 3 and NumPy, for example `python checks/check_van_vleck.py`.
+Numerical checks of the formulas are in [`checks/`](checks/). Run them from the repository root with Python 3 and NumPy, for example `python checks/check_van_vleck.py`. The scripts in [`figures/`](figures/) redraw the figures with Matplotlib, for example `python figures/van_vleck_block_diagonalization.py`; regenerating an unchanged figure leaves its SVG byte for byte the same.
 
 ## Open in Obsidian
 

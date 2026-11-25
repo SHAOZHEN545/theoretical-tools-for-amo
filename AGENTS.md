@@ -8,7 +8,9 @@ Preserve Obsidian wikilinks, native callouts, and the shared figure syntax. Pref
 
 This repository is public. It holds generic theoretical tools for atomic and molecular physics, written as self-contained tutorials. Do not copy in anything about unpublished experimental work, and do not link to notes that live only in other repositories: every cross-reference must point to a note inside Notes/, or be replaced by a short self-contained explanation.
 
-Numerical checks of the notes live in checks/ and are linked from the notes by their GitHub URL, because the website only publishes Notes/.
+Numerical checks of the notes live in checks/ and are linked from the notes by their GitHub URL, because the website only publishes Notes/. Scripts that draw the figures live in figures/ and write SVGs into the Pictures/ folder of their topic; keep their output reproducible (text as paths, a fixed svg.hashsalt, no date).
+
+Notes follow the pedagogical-notes skill in .claude/skills/, including its rule for equation block IDs and block links.
 
 ## Website
 

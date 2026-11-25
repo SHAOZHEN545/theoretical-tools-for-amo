@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Numerical checks of the claims in
-"Van Vleck perturbation theory - dressed states, errors and symmetries" (VVB),
-the companion of "Van Vleck perturbation theory and the effective Hamiltonian" (VV).
+"Van Vleck perturbation theory - dressed states and rotated operators" and
+"Van Vleck perturbation theory - errors" (VVB),
+the companions of "Van Vleck perturbation theory and the effective Hamiltonian" (VV).
 
 Run from the repository root:
     python checks/check_van_vleck_states_errors.py
