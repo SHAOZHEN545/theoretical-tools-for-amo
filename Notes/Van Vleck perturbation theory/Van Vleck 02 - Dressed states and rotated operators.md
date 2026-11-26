@@ -5,13 +5,13 @@ tags:
   - effective-Hamiltonian
 ---
 
-[[Van Vleck perturbation theory and the effective Hamiltonian|The effective Hamiltonian]] rotates the Hamiltonian, $\tilde H=e^{A}He^{-A}$, and keeps its $P$ block. As [[Van Vleck perturbation theory - near and far#A change of basis|near and far]] explains, the rotation is a change of basis: written in the bare basis, $\tilde H$ is the true Hamiltonian $H$ written in a basis of dressed states. The main line never needed those states. Here we look at them, and at what they mean for every operator other than $H$.
+[[Van Vleck 01 - The effective Hamiltonian|The effective Hamiltonian]] rotates the Hamiltonian, $\tilde H=e^{A}He^{-A}$, and keeps its $P$ block. As [[Van Vleck 00 - Near and far#A change of basis|near and far]] explains, the rotation is a change of basis: written in the bare basis, $\tilde H$ is the true Hamiltonian $H$ written in a basis of dressed states. The main line never needed those states. Here we look at them, and at what they mean for every operator other than $H$.
 
 The notation is that of the derivation. $P$ and $Q$ are spanned by eigenstates $|a\rangle,|b\rangle,\dots$ and $|\alpha\rangle,|\beta\rangle,\dots$ of $H_0$, $A=A_1+A_2+\cdots$ is the anti-Hermitian generator, $H_{\rm eff}=P\tilde HP$, and $R(E)=Q/(E-H_0)$. Equation numbers refer to the derivation and link to it.
 
 ## What the model states stand for
 
-Each basis state $|a\rangle$ of the model space stands for the dressed state
+Each bare state $|a\rangle$ of the model space labels a dressed state, defined in [[Van Vleck 00 - Near and far#A change of basis|near and far]],
 
 $$
 |\tilde a\rangle=e^{-A}|a\rangle ,
@@ -24,27 +24,13 @@ $$
 $$
 ^eq-heff-dressed
 
-The eigenvectors of $H_{\rm eff}$ correspond to true eigenstates in the same way. Take an eigenvector of the effective Hamiltonian, $H_{\rm eff}|\varphi\rangle=E|\varphi\rangle$ with $|\varphi\rangle$ in $P$, and rotate it back, $|\psi\rangle=e^{-A}|\varphi\rangle$. Inserting $1=e^{-A}e^{A}$ in front of $H$,
+As [[Van Vleck 00 - Near and far#^eq-heff-eigenstates|near and far]] shows, an eigenvector $\sum_ac_a|a\rangle$ of $H_{\rm eff}$, with eigenvalue $E$, gives the eigenstate $\sum_ac_a|\tilde a\rangle=e^{-A}\sum_ac_a|a\rangle$ of $H$ with the same eigenvalue. The coefficients $c_a$ are what we compute inside $P$; the dressing is common to all eigenvectors and is carried by $e^{-A}$. The argument uses only the block diagonality, so it holds to the order at which we stop the series for $A$.
 
-$$
-H|\psi\rangle=He^{-A}|\varphi\rangle=e^{-A}\big(e^{A}He^{-A}\big)|\varphi\rangle=e^{-A}\tilde H|\varphi\rangle .
-$$
-
-Since $\tilde H$ is block diagonal, it maps $|\varphi\rangle$ into $P$, and there it acts as $H_{\rm eff}$: $\tilde H|\varphi\rangle=P\tilde HP|\varphi\rangle=E|\varphi\rangle$. Hence
-
-$$
-H|\psi\rangle=E\,e^{-A}|\varphi\rangle=E|\psi\rangle .
-$$
-
-The one input beyond algebra was the block diagonality of $\tilde H$, so this holds to the order at which we stopped the rotation.
-
-An eigenvector $\sum_ac_a|a\rangle$ of $H_{\rm eff}$ therefore stands for the true eigenstate $\sum_ac_a|\tilde a\rangle$. The coefficients $c_a$ are what we compute inside $P$; the dressing is common to all eigenvectors and is carried by $e^{-A}$.
-
-The dressed states themselves are not eigenstates of $H$. They form the basis in which $H$ no longer connects $P$ to $Q$, while inside $P$ it still has matrix elements between them, and diagonalizing $H_{\rm eff}$ takes care of those. Only when $P$ holds a single state is its dressed state an eigenstate, as for the two levels of [[Van Vleck perturbation theory - near and far#^eq-two-level-dressed|near and far]].
+The dressed states themselves are not eigenstates of $H$. They form the basis in which $H$ no longer connects $P$ to $Q$, while inside $P$ it still has matrix elements between them, and diagonalizing $H_{\rm eff}$ takes care of those. Only when $P$ holds a single state is its dressed state an eigenstate, as for the two levels of [[Van Vleck 00 - Near and far#^eq-two-level-dressed|near and far]].
 
 ### The first-order dressing
 
-To first order only $A_1$ acts, and by [[Van Vleck perturbation theory and the effective Hamiltonian#^eq-a1|Eq. (4)]], $A_1|a\rangle=-R(E_a)V|a\rangle$. So
+To first order only $A_1$ acts, and by [[Van Vleck 01 - The effective Hamiltonian#^eq-a1|Eq. (4)]], $A_1|a\rangle=-R(E_a)V|a\rangle$. So
 
 $$
 \begin{aligned}
@@ -65,7 +51,7 @@ $$
 $$
 ^eq-dressing-second-order
 
-The terms with one generator lie in $Q$, because an off-diagonal operator carries $P$ into $Q$. Two generators carry $|a\rangle$ out and back, and [[Van Vleck perturbation theory and the effective Hamiltonian#^eq-a1|Eq. (4)]] applied twice gives
+The terms with one generator lie in $Q$, because an off-diagonal operator carries $P$ into $Q$. Two generators carry $|a\rangle$ out and back, and [[Van Vleck 01 - The effective Hamiltonian#^eq-a1|Eq. (4)]] applied twice gives
 
 $$
 \tfrac12A_1^2|a\rangle=-\frac12\sum_{b\in P}|b\rangle\,\langle b|V\,R(E_b)R(E_a)\,V|a\rangle .
@@ -83,7 +69,7 @@ $$
 \big\|Q|\tilde a\rangle\big\|^2=w_a,\qquad\big\|P|\tilde a\rangle\big\|^2=1-w_a ,
 $$
 
-up to terms of third order. So $w_a$ is the probability of finding the system outside the model space. It is the natural measure of how strongly the folding disturbs a state, and it sets the size of the errors in [[Van Vleck perturbation theory - errors#The small parameter|errors]].
+up to terms of third order. So $w_a$ is the probability of finding the system outside the model space. It is the natural measure of how strongly the folding disturbs a state, and it sets the size of the errors in [[Van Vleck 03 - Errors#The small parameter|errors]].
 
 The components along the other model states, $-\tfrac12\langle b|VR(E_b)R(E_a)V|a\rangle$, have the same origin. The admixtures of $|a\rangle$ and $|b\rangle$ overlap in $Q$, by $\langle a|VR(E_a)R(E_b)V|b\rangle$, and the two dressed states remain orthogonal only because their parts in $P$ lean away from each other by half that overlap each.
 
@@ -108,14 +94,14 @@ The components along the other model states, $-\tfrac12\langle b|VR(E_b)R(E_a)V|
 
 ## The averaged denominators, seen from the states
 
-[[Van Vleck perturbation theory and the effective Hamiltonian#^eq-h2|Eq. (5)]] measures the distance of each intermediate state once from the energy of the bra's state and once from that of the ket's state, and takes the average. The derivation traced the two energies to the two terms of a commutator. The dressed states give a more natural picture.
+[[Van Vleck 01 - The effective Hamiltonian#^eq-h2|Eq. (5)]] measures the distance of each intermediate state once from the energy of the bra's state and once from that of the ket's state, and takes the average. The derivation traced the two energies to the two terms of a commutator. The dressed states give a more natural picture.
 
 By [[#^eq-heff-dressed|the identity above]], a matrix element of $H_{\rm eff}$ is a matrix element of $H$ with a dressed state at each end. By the first-order dressing, each end is dressed with denominators measured from its own energy. So the element carries both energies, and it carries them symmetrically. The callout below checks that the two dressings combine into exactly the average.
 
 Hermiticity comes out the same way, without being imposed. Both ends of every matrix element are dressed in the same way, so $\langle\tilde a|H|\tilde b\rangle^*=\langle\tilde b|H|\tilde a\rangle$ automatically.
 
 > [!note]- The average from the dressed states
-> Take the [[#^eq-dressing-second-order|second-order dressing]] of $|\tilde b\rangle$ and write $R_b\equiv R(E_b)$. By [[Van Vleck perturbation theory and the effective Hamiltonian#^eq-a1|Eq. (4)]], $-A_1|b\rangle=R_bV|b\rangle$ lies in $Q$, while
+> Take the [[#^eq-dressing-second-order|second-order dressing]] of $|\tilde b\rangle$ and write $R_b\equiv R(E_b)$. By [[Van Vleck 01 - The effective Hamiltonian#^eq-a1|Eq. (4)]], $-A_1|b\rangle=R_bV|b\rangle$ lies in $Q$, while
 >
 > $$
 > \tfrac12A_1^2|b\rangle=-\frac12\sum_{c\in P}|c\rangle\langle c|VR_cR_bV|b\rangle
@@ -137,7 +123,7 @@ Hermiticity comes out the same way, without being imposed. Both ends of every ma
 > \end{aligned}
 > $$
 >
-> the average of [[Van Vleck perturbation theory and the effective Hamiltonian#^eq-h2|Eq. (5)]]. The first two terms alone, the coupling of a bare end to a dressed one, would count the excursion twice. The energy carried by the admixtures removes half of it.
+> the average of [[Van Vleck 01 - The effective Hamiltonian#^eq-h2|Eq. (5)]]. The first two terms alone, the coupling of a bare end to a dressed one, would count the excursion twice. The energy carried by the admixtures removes half of it.
 
 ## Other operators must be rotated too
 
@@ -157,15 +143,15 @@ O_{\rm eff}=Pe^{A}Oe^{-A}P&=POP+P[A_1,O]P\\
 $$
 ^eq-o-eff
 
-This is the [[Van Vleck perturbation theory and the effective Hamiltonian#^eq-bch|BCH series]] of the derivation, with one difference: the generator is no longer ours to choose. $H$ has fixed it, and every other operator has to follow. The Hamiltonian is the one operator for which this is automatic, because $H_{\rm eff}$ is $H$ rotated.
+This is the [[Van Vleck 01 - The effective Hamiltonian#^eq-bch|BCH series]] of the derivation, with one difference: the generator is no longer ours to choose. $H$ has fixed it, and every other operator has to follow. The Hamiltonian is the one operator for which this is automatic, because $H_{\rm eff}$ is $H$ rotated.
 
 Rayleigh–Schrödinger theory never seems to need this step, but it takes the step silently. There the corrected states are written out, $|\psi\rangle=|a\rangle+R(E_a)V|a\rangle+\cdots$, and $\langle\psi|O|\psi\rangle$ is evaluated with them, so the admixture of $Q$ sits in the states. Van Vleck theory keeps the states of $P$ simple, so the admixture has to sit in the operator instead. The equation above is one identity read in two ways.
 
 ### How large the correction is
 
-The block rule of [[Van Vleck perturbation theory and the effective Hamiltonian#Rotating the Hamiltonian|the derivation]] answers at once: each commutator with $A$ flips the block type of $O$. Every operator is the sum of a block-diagonal and an off-diagonal part, and the two parts behave differently.
+The block rule of [[Van Vleck 01 - The effective Hamiltonian#The rotated Hamiltonian|the derivation]] answers at once: each commutator with $A$ flips the block type of $O$. Every operator is the sum of a block-diagonal and an off-diagonal part, and the two parts behave differently.
 
-An off-diagonal operator connects $P$ only to $Q$, so $POP=0$. The first correction, $P[A_1,O]P$, is then the leading term. With [[Van Vleck perturbation theory and the effective Hamiltonian#^eq-a1|Eq. (4)]],
+An off-diagonal operator connects $P$ only to $Q$, so $POP=0$. The first correction, $P[A_1,O]P$, is then the leading term. With [[Van Vleck 01 - The effective Hamiltonian#^eq-a1|Eq. (4)]],
 
 $$
 \langle a|O_{\rm eff}|b\rangle=\langle a|V\,R(E_a)\,O|b\rangle+\langle a|O\,R(E_b)\,V|b\rangle+\cdots .
@@ -173,7 +159,7 @@ $$
 
 The bare operator misses the effect entirely.
 
-For a block-diagonal operator, $[A_1,O]$ and $[A_2,O]$ are off-diagonal and vanish between two $P$'s. The first correction comes at second order, and [[Van Vleck perturbation theory and the effective Hamiltonian#^eq-a1|Eq. (4)]] used twice gives
+For a block-diagonal operator, $[A_1,O]$ and $[A_2,O]$ are off-diagonal and vanish between two $P$'s. The first correction comes at second order, and [[Van Vleck 01 - The effective Hamiltonian#^eq-a1|Eq. (4)]] used twice gives
 
 $$
 \tfrac12P[A_1,[A_1,O]]P=\sum_{a,b}P_aV\,R(E_a)\,O\,R(E_b)\,VP_b-\tfrac12\{N,POP\},
@@ -198,8 +184,8 @@ Three things should be kept apart.
 
 The precession phase is the difference of two eigenvalues of $H_{\rm eff}$, accumulated over time. Eigenvalues do not depend on the basis, and nothing has to be rotated for them. This is the quantity an EDM measurement is after.
 
-The readout light is a new perturbation, and for it the excited state is not far: the light is resonant. That state cannot be folded away, and the readout needs a model space of its own that contains it ([[Van Vleck perturbation theory - errors#When the folding fails|when the folding fails]]). The effective Hamiltonian of the trap light has nothing to say about the readout itself.
+The readout light is a new perturbation, and for it the excited state is not far: the light is resonant. That state cannot be folded away, and the readout needs a model space of its own that contains it ([[Van Vleck 03 - Errors#When the folding fails|when the folding fails]]). The effective Hamiltonian of the trap light has nothing to say about the readout itself.
 
-What connects the two stages is the map between dressed and bare states. Suppose the trap light is turned off before the readout, slowly compared with the inverse of its detuning; every laboratory ramp is slow on the scale of femtoseconds. Then the adiabatic theorem carries each dressed state continuously into the bare state with the same label, the reverse of what happens when a field is switched on ([[Van Vleck perturbation theory - near and far#What the atom does|near and far]]). The populations and coherences computed in $P$ reach the readout unchanged, and nothing has to be rotated.
+What connects the two stages is the map between dressed and bare states. Suppose the trap light is turned off before the readout, slowly compared with the inverse of its detuning; every laboratory ramp is slow on the scale of femtoseconds. Then the adiabatic theorem carries each dressed state continuously into the bare state with the same label, the reverse of what happens when a field is switched on ([[Van Vleck 00 - Near and far#What the atom does|near and far]]). The populations and coherences computed in $P$ reach the readout unchanged, and nothing has to be rotated.
 
-If the readout happens with the trap light still on, the readout light addresses dressed states, and its operators should be rotated. A projector onto a spin sublevel is block diagonal, so its correction is of relative size $w$, roughly the light shift over the detuning ([[Van Vleck perturbation theory - errors#The small parameter|errors]]): $10^{-8}$ for a megahertz trap and a detuning of a hundred terahertz. That changes the contrast, not the phase. Only a sudden switch would leave a trace. The bare state would then be the dressed state plus a small amplitude, coupling over distance, in the states that grow out of $Q$. For a periodic drive, Floquet theory gives the same picture, with the rotation becoming a periodic micromotion of the state at the drive frequency.
+If the readout happens with the trap light still on, the readout light addresses dressed states, and its operators should be rotated. A projector onto a spin sublevel is block diagonal, so its correction is of relative size $w$, roughly the light shift over the detuning ([[Van Vleck 03 - Errors#The small parameter|errors]]): $10^{-8}$ for a megahertz trap and a detuning of a hundred terahertz. That changes the contrast, not the phase. Only a sudden switch would leave a trace. The bare state would then be the dressed state plus a small amplitude, coupling over distance, in the states that grow out of $Q$. For a periodic drive, Floquet theory gives the same picture, with the rotation becoming a periodic micromotion of the state at the drive frequency.

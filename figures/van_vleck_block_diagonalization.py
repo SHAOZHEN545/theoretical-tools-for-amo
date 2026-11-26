@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Folding as a block diagonalization, for the note
-"Van Vleck perturbation theory and the effective Hamiltonian".
+"Van Vleck 01 - The effective Hamiltonian".
 
 Left: H = H0 + lambda V in blocks, with the couplings PVQ and QVP to the far states.
 Right: the rotated Hamiltonian e^A H e^-A. A generator built through order n leaves an

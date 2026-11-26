@@ -7,7 +7,7 @@ tags:
 
 Long before we compute any coefficient, we usually know which operators an effective Hamiltonian may contain. That knowledge rests on one property of the folding: the effective Hamiltonian inherits the symmetries of the full one. This note shows why, how the statement is used when the applied fields break the symmetry, and what it asks of the model space.
 
-The notation is that of [[Van Vleck perturbation theory and the effective Hamiltonian|the derivation]]. $P$ and $Q$ are spanned by eigenstates $|a\rangle,|b\rangle,\dots$ and $|\alpha\rangle,|\beta\rangle,\dots$ of $H_0$, $A=A_1+A_2+\cdots$ is the anti-Hermitian generator, $\tilde H=e^{A}He^{-A}$, $H_{\rm eff}=P\tilde HP$, and $R(E)=Q/(E-H_0)$. Equation numbers refer to the derivation and link to it.
+The notation is that of [[Van Vleck 01 - The effective Hamiltonian|the derivation]]. $P$ and $Q$ are spanned by eigenstates $|a\rangle,|b\rangle,\dots$ and $|\alpha\rangle,|\beta\rangle,\dots$ of $H_0$, $A=A_1+A_2+\cdots$ is the anti-Hermitian generator, $\tilde H=e^{A}He^{-A}$, $H_{\rm eff}=P\tilde HP$, and $R(E)=Q/(E-H_0)$. Equation numbers refer to the derivation and link to it.
 
 ## Symmetries survive the folding
 
@@ -17,7 +17,7 @@ $$
 UH_{\rm eff}U^{-1}=H_{\rm eff} .
 $$
 
-At second order we can read this off [[Van Vleck perturbation theory and the effective Hamiltonian#^eq-a1|Eq. (4)]]. Group the model states by energy, and let $\Pi_E$ project onto the states of $P$ with energy $E$. The equation then reads
+At second order we can read this off [[Van Vleck 01 - The effective Hamiltonian#^eq-a1|Eq. (4)]]. Group the model states by energy, and let $\Pi_E$ project onto the states of $P$ with energy $E$. The equation then reads
 
 $$
 A_1=\sum_E\Big(\Pi_E\,V\,R(E)-R(E)\,V\,\Pi_E\Big),
@@ -28,7 +28,7 @@ a sum over the distinct energies in $P$. A symmetry of $H_0$ maps each energy le
 The grouping by energy matters. A symmetry may mix the states of a degenerate level, so it need not commute with the individual $P_a=|a\rangle\langle a|$; it does commute with their sum over the level. The higher generators are built in the same way, from $V$, the $\Pi_E$, the resolvents and the lower generators, so the argument repeats at every order. A tidier proof, valid at all orders at once, rests on the uniqueness of the generator.
 
 > [!note]- Proof for unitary and antiunitary symmetries
-> *Uniqueness.* Suppose $A_1$ and $A_1'$ are both off-diagonal and both satisfy [[Van Vleck perturbation theory and the effective Hamiltonian#^eq-a1-condition|Eq. (1)]]. Their difference is off-diagonal and commutes with $H_0$, so each of its elements obeys $\langle a|A_1-A_1'|\alpha\rangle(E_\alpha-E_a)=0$. Since $E_a\neq E_\alpha$, $A_1'=A_1$.
+> *Uniqueness.* Suppose $A_1$ and $A_1'$ are both off-diagonal and both satisfy [[Van Vleck 01 - The effective Hamiltonian#^eq-a1-condition|Eq. (1)]]. Their difference is off-diagonal and commutes with $H_0$, so each of its elements obeys $\langle a|A_1-A_1'|\alpha\rangle(E_\alpha-E_a)=0$. Since $E_a\neq E_\alpha$, $A_1'=A_1$.
 >
 > *Unitary $U$.* $UA_1U^{-1}$ is off-diagonal, because $U$ commutes with $P$, and it satisfies the same equation:
 >

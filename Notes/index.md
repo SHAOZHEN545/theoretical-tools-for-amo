@@ -11,11 +11,11 @@ These notes collect theoretical tools that atomic and molecular physics keeps re
 
 Atoms and molecules have a hierarchy of energy scales: electronic, vibrational, rotational, fine and hyperfine. An experiment usually cares about a handful of states at one level of that hierarchy, while everything else lies far away. Van Vleck perturbation theory "folds down" the Hilbert space onto those few states and gives an effective Hamiltonian that still remembers the rest.
 
-- [[Van Vleck perturbation theory - near and far|Near and far]] — The context. Why we fold the Hilbert space down, when two states count as near or far, what a unitary rotation does to states and operators, and what an atom does when a field is switched on.
-- [[Van Vleck perturbation theory and the effective Hamiltonian|The effective Hamiltonian]] — **The main line**. The unitary rotation that decouples the model space, and the effective Hamiltonian through third order, with the non-degenerate and degenerate formulas as special cases.
-- [[Van Vleck perturbation theory - dressed states and rotated operators|Dressed states and rotated operators]] — What the basis states of the model space stand for, order by order, and why every operator other than the Hamiltonian must be rotated too.
-- [[Van Vleck perturbation theory - errors|Errors]] — How good a truncated effective Hamiltonian is: the small parameter, the cost of stopping, how exact the averaged denominators are, and when the folding fails.
-- [[Van Vleck perturbation theory - symmetries|Symmetries]] — Why the effective Hamiltonian inherits the symmetries of the full one, and what that asks of the model space.
+- [[Van Vleck 00 - Near and far|Near and far]] — The context. Why we fold the Hilbert space down, when two states count as near or far, why folding down is a change of basis, and what an atom does when a field is switched on.
+- [[Van Vleck 01 - The effective Hamiltonian|The effective Hamiltonian]] — **The main line**. The unitary rotation that decouples the model space, and the effective Hamiltonian through third order, with the non-degenerate and degenerate formulas as special cases.
+- [[Van Vleck 02 - Dressed states and rotated operators|Dressed states and rotated operators]] — What the basis states of the model space stand for, order by order, and why every operator other than the Hamiltonian must be rotated too.
+- [[Van Vleck 03 - Errors|Errors]] — How good a truncated effective Hamiltonian is: the small parameter, the cost of stopping, how exact the averaged denominators are, and when the folding fails.
+- [[Van Vleck 04 - Symmetries|Symmetries]] — Why the effective Hamiltonian inherits the symmetries of the full one, and what that asks of the model space.
 
 ## Browsing the notes
 

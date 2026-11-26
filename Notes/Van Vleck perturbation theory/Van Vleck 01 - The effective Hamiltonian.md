@@ -13,7 +13,7 @@ $$
 
 where the eigenstates and energies of $H_0$ are known and $V$ is the perturbation. The parameter $\lambda$ only keeps track of orders; we set $\lambda = 1$ once the orders are sorted.
 
-We want an effective Hamiltonian that acts only on a few of the states and still knows about all the others. Why we want it, how to choose the few, and what a unitary rotation does to states and operators, is the subject of [[Van Vleck perturbation theory - near and far|near and far]].
+We want an effective Hamiltonian that acts only on a few of the states and still knows about all the others. Why we want it, how to choose the few, and why it amounts to a change of basis are the subject of [[Van Vleck 00 - Near and far|near and far]]. Here we construct it.
 
 ## Two subspaces
 
@@ -29,7 +29,7 @@ $$
 |\langle a|V|\alpha\rangle| \ll |E_a - E_\alpha|\qquad\text{for all } a\in P,\ \alpha\in Q .
 $$
 
-Inside $P$ nothing is required. Its states may be degenerate or not, and $V$ may couple them strongly, because in the end we diagonalize the effective Hamiltonian exactly. (The one proviso, that these couplings must not push the model states toward $Q$, is taken up in [[Van Vleck perturbation theory - errors#Approximations on top|errors]].)
+Inside $P$ nothing is required. Its states may be degenerate or not, and $V$ may couple them strongly, because in the end we diagonalize the effective Hamiltonian exactly. (The one proviso, that these couplings must not push the model states toward $Q$, is taken up in [[Van Vleck 03 - Errors#Approximations on top|errors]].)
 
 It helps to split every operator $X$ into its block-diagonal and off-diagonal parts,
 
@@ -39,19 +39,19 @@ $$
 
 $H_0$ is block diagonal. $V$ generally has both parts, and $V_{OD}$ is the troublemaker: it is what ties our states to the rest of the world.
 
-## Rotating the Hamiltonian
+## The rotated Hamiltonian
 
-We look for a unitary transformation $e^{A}$, with $A$ anti-Hermitian, $A^\dagger=-A$, such that
+Folding down means finding a basis of dressed states, $|\tilde i\rangle=e^{-A}|i\rangle$ with $A^\dagger=-A$, in which $H$ is block diagonal. As [[Van Vleck 00 - Near and far#A change of basis|near and far]] shows, the matrix of $H$ in that basis is the matrix of the rotated Hamiltonian
 
 $$
 \tilde H = e^{A} H e^{-A}
 $$
 
-has no off-diagonal block, **at least up to the order we need**. (Many texts write $A=iS$ with a Hermitian $S$.) Once that is true, $P\tilde H P$ is a Hamiltonian on $P$ alone. Its eigenvalues are eigenvalues of $H$ to that order, because a unitary transformation does not change the spectrum. In the language of [[Van Vleck perturbation theory - near and far#A change of basis|near and far]], $\tilde H$ written in the bare basis is $H$ written in a basis of dressed states, and the dressed states of $P$ no longer talk to those of $Q$.
+in the bare basis, [[Van Vleck 00 - Near and far#^eq-dressed-equals-bare|block by block]]. So we look for an $A$ such that $\tilde H$ has no off-diagonal block, $P\tilde HQ=0$, **at least up to the order we need**. (Many texts write $A=iS$ with a Hermitian $S$.) The $P$ block is then the effective Hamiltonian, $H_{\rm eff}=P\tilde HP$, and its eigenvalues are eigenvalues of $H$ to that order.
 
 > [!figure|center]
 > ![[Van Vleck block diagonalization.svg|center|680]]
-> Folding is a block diagonalization. The rotation removes the blocks $PVQ$ and $QVP$ that tie the model space to the far states. A generator built through order $n$ in $V$ leaves a coupling of order $n+1$, which we drop together with the $Q$ block. What remains is $H_{\rm eff}=P\tilde HP$, and nothing inside $P$ had to be small.
+> Folding is a block diagonalization. Left, $H$ in the bare basis; right, $\tilde H$ in the bare basis, which is $H$ in the dressed basis. The change of basis removes the blocks $PVQ$ and $QVP$ that tie the model space to the far states. A generator built through order $n$ in $V$ leaves a coupling of order $n+1$, which we drop together with the $Q$ block. What remains is $H_{\rm eff}=P\tilde HP$, and nothing inside $P$ had to be small.
 
 The Baker–Campbell–Hausdorff formula expands $\tilde H$ in nested commutators,
 
@@ -235,7 +235,7 @@ This is the one step in which the energies of the model space enter, and **each 
 > A_1=\begin{pmatrix}0&\theta\\-\theta&0\end{pmatrix},\qquad e^{-A_1}=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix} .
 > $$
 >
-> So $e^{-A_1}$ is a rotation by the angle $\theta$ in the plane of $|a\rangle$ and $|\alpha\rangle$. It carries $|a\rangle$ into the dressed state of [[Van Vleck perturbation theory - near and far#A change of basis|near and far]],
+> So $e^{-A_1}$ is a rotation by the angle $\theta$ in the plane of $|a\rangle$ and $|\alpha\rangle$. It carries $|a\rangle$ into the dressed state of [[Van Vleck 00 - Near and far#A change of basis|near and far]],
 >
 > $$
 > |\tilde a\rangle=e^{-A_1}|a\rangle=\cos\theta\,|a\rangle+\sin\theta\,|\alpha\rangle\approx|a\rangle+\theta\,|\alpha\rangle .
@@ -247,9 +247,9 @@ This is the one step in which the energies of the model space enter, and **each 
 > H=\begin{pmatrix}E_a&v\\v&E_\alpha\end{pmatrix} ,
 > $$
 >
-> and its exact eigenvector that grows out of $|a\rangle$ is $\cos\varphi\,|a\rangle+\sin\varphi\,|\alpha\rangle$, with $\tan2\varphi=2v/(E_a-E_\alpha)=2\theta$ ([[Van Vleck perturbation theory - near and far#^eq-two-level-dressed|near and far]]). For small $\theta$, $\varphi=\tfrac12\arctan2\theta=\theta-\tfrac43\theta^3+\cdots$. The first-order rotation gives the exact eigenvector, up to terms of third order in the angle.
+> and its exact eigenvector that grows out of $|a\rangle$ is $\cos\varphi\,|a\rangle+\sin\varphi\,|\alpha\rangle$, with $\tan2\varphi=2v/(E_a-E_\alpha)=2\theta$ ([[Van Vleck 00 - Near and far#^eq-two-level-dressed|near and far]]). For small $\theta$, $\varphi=\tfrac12\arctan2\theta=\theta-\tfrac43\theta^3+\cdots$. The first-order rotation gives the exact eigenvector, up to terms of third order in the angle.
 >
-> With many states, Eq. (4) is a sum of such small rotations, one in the plane of every pair $(a,\alpha)$, each by its own angle, coupling over distance. The angle is measured from the energy of its own model state, which is why every $P_a$ in Eq. (4) comes with its own $R(E_a)$. For all angles to be small, every external state must be far from every model state, which is the requirement of [[#Two subspaces]]. What the dressed states look like then, and at higher orders, is the subject of [[Van Vleck perturbation theory - dressed states and rotated operators|dressed states and rotated operators]].
+> With many states, Eq. (4) is a sum of such small rotations, one in the plane of every pair $(a,\alpha)$, each by its own angle, coupling over distance. The angle is measured from the energy of its own model state, which is why every $P_a$ in Eq. (4) comes with its own $R(E_a)$. For all angles to be small, every external state must be far from every model state, which is the requirement of [[#Two subspaces]]. What the dressed states look like then, and at higher orders, is the subject of [[Van Vleck 02 - Dressed states and rotated operators|dressed states and rotated operators]].
 
 When the model space is degenerate, $E_a=E_0$ for every $a$, the sum in Eq. (4) collapses to an operator that needs no basis at all:
 
@@ -257,7 +257,7 @@ $$
 A_1=PVR-RVP,\qquad R\equiv R(E_0) .
 $$
 
-Eq. (4) also shows where the theory breaks down. $R(E_a)$ blows up when a state of $Q$ approaches $E_a$, which is the requirement of [[#Two subspaces]] seen from the inside ([[Van Vleck perturbation theory - errors#When the folding fails|when the folding fails]]).
+Eq. (4) also shows where the theory breaks down. $R(E_a)$ blows up when a state of $Q$ approaches $E_a$, which is the requirement of [[#Two subspaces]] seen from the inside ([[Van Vleck 03 - Errors#When the folding fails|when the folding fails]]).
 
 ## Second order
 
@@ -348,7 +348,7 @@ the second-order energy of non-degenerate (Rayleigh–Schrödinger) perturbation
 > \frac{\Delta-\sqrt{\Delta^2+4|v|^2}}{2}=\frac{\Delta}{2}\Big(1-\sqrt{1+x}\Big)=-\frac{|v|^2}{\Delta}+\frac{|v|^4}{\Delta^3}-\cdots .
 > $$
 >
-> The second-order formula reproduces the first term. The first correction is smaller by $|v|^2/\Delta^2$, the square of the angle, coupling over distance. There is no third-order term in between, because $V$ has no diagonal elements here; [[Van Vleck perturbation theory - errors#Stopping|errors]] explains when this happens in general.
+> The second-order formula reproduces the first term. The first correction is smaller by $|v|^2/\Delta^2$, the square of the angle, coupling over distance. There is no third-order term in between, because $V$ has no diagonal elements here; [[Van Vleck 03 - Errors#Stopping|errors]] explains when this happens in general.
 
 Textbook degenerate perturbation theory is organized differently from Eq. (7). It first diagonalizes $V$ inside the degenerate level and then applies the non-degenerate formulas to the new states. That works when $PVP$ lifts the degeneracy. When it does not, as for the light shifts of an atomic ground level, where $PVP=0$ and the splitting first appears in $PVRVP$, the recipe needs care. Eq. (7) simply hands us the operator to diagonalize, first and second order together.
 
@@ -453,7 +453,7 @@ $$
 PVR^2VP=\sum_{\alpha\in Q}\frac{PV|\alpha\rangle\langle\alpha|VP}{(E_0-E_\alpha)^2}
 $$
 
-is the norm of the first-order admixture, so its expectation value in a model state is the probability of finding the system outside $P$ ([[Van Vleck perturbation theory - dressed states and rotated operators#The second-order dressing|dressed states]]). The term $-\tfrac12\{PVP,PVR^2VP\}$ says that the couplings inside $P$ act only while the system is actually in $P$. Equivalently, it corrects the distances: $PVP$ moves the true energy away from $E_0$, and every excursion is really measured from there.
+is the norm of the first-order admixture, so its expectation value in a model state is the probability of finding the system outside $P$ ([[Van Vleck 02 - Dressed states and rotated operators#The second-order dressing|dressed states]]). The term $-\tfrac12\{PVP,PVR^2VP\}$ says that the couplings inside $P$ act only while the system is actually in $P$. Equivalently, it corrects the distances: $PVP$ moves the true energy away from $E_0$, and every excursion is really measured from there.
 
 For a single state both readings are visible at once. With $a=b=c$, Eq. (10) is
 
@@ -467,8 +467,8 @@ the third-order energy of Rayleigh–Schrödinger theory. Its last term is the f
 
 The main line ends here, with $H_{\rm eff}$ through third order, as operators and as matrix elements. Several questions were set aside on the way, and each has a note of its own.
 
-We rotated the Hamiltonian, so the basis states of $P$ now stand for dressed states. What these look like order by order, how they explain the averaged denominators of [[#^eq-h2|Eq. (5)]], and why every other operator we measure must be rotated with the same generator, is taken up in [[Van Vleck perturbation theory - dressed states and rotated operators|dressed states and rotated operators]].
+The basis states of $P$ stand for dressed states. What these look like order by order, how they explain the averaged denominators of [[#^eq-h2|Eq. (5)]], and why every other operator we measure must be rotated with the same generator, is taken up in [[Van Vleck 02 - Dressed states and rotated operators|dressed states and rotated operators]].
 
-We stopped the series at some order and measured every distance from unperturbed energies. How large the resulting errors are, how the averaged denominators compare with an exact folding of the eigenvalue equation, and when the construction fails altogether, is the subject of [[Van Vleck perturbation theory - errors|errors]].
+We stopped the series at some order and measured every distance from unperturbed energies. How large the resulting errors are, how the averaged denominators compare with an exact folding of the eigenvalue equation, and when the construction fails altogether, is the subject of [[Van Vleck 03 - Errors|errors]].
 
-Finally, $H_{\rm eff}$ inherits the symmetries of $H$, which often fixes its form before any coefficient is computed. [[Van Vleck perturbation theory - symmetries|Symmetries]] explains why, and what this asks of the model space.
+Finally, $H_{\rm eff}$ inherits the symmetries of $H$, which often fixes its form before any coefficient is computed. [[Van Vleck 04 - Symmetries|Symmetries]] explains why, and what this asks of the model space.

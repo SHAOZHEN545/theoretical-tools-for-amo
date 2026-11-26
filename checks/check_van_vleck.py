@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Numerical checks of the formulas in
-"Van Vleck perturbation theory and the effective Hamiltonian" (VV).
+"Van Vleck 01 - The effective Hamiltonian" (VV).
 
 Run from the repository root:
     python checks/check_van_vleck.py
